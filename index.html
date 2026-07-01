@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spendr — track spending in two taps</title>
+<meta name="description" content="Spendr is the fastest, simplest expense tracker. No setup, no accounting jargon, no formulas. Tap the amount, tap a category — done. Like a clean sheet of paper and a pencil." />
+<meta name="theme-color" content="#ffffff" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Spendr — track spending in two taps" />
+<meta property="og:description" content="The simplest way to see where your money goes. No setup, no jargon — just tap and go." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/logo-disc.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="assets/logo-disc.png" alt="Spendr logo" />
+      <span>Spendr</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      <a href="#get" class="btn btn-primary" style="padding:10px 18px;">Get Spendr</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Expense tracking, minus the homework</p>
+      <h1>Write down what you spend.<br /><em>In two taps.</em></h1>
+      <p class="lead">Bought a coffee or grabbed a taxi? Tap the amount, tap a category — done. No setup, no jargon, no math.</p>
+      <div class="hero-cta">
+        <a href="#get" class="btn btn-primary">
+          Get it now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <p class="hero-note">Works offline · <b>Light &amp; dark</b> themes · Your data stays on your phone</p>
+    </div>
+
+    <div class="hero-phones reveal">
+      <div class="blob"></div>
+      <div class="phone p1"><img src="assets/screens/03-analytics.jpg" alt="Spendr analytics — light theme" loading="eager" /></div>
+      <div class="phone p2"><img src="assets/screens/02-keypad-dark.jpg" alt="Spendr keypad — dark theme" loading="eager" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust">
+  <div class="wrap">
+    <span><b>0 sec</b> setup — open and start</span>
+    <span><b>2 taps</b> to log an expense</span>
+    <span><b>50+</b> categories, ready to go</span>
+    <span><b>2</b> themes — light &amp; dark</span>
+    <span><b>100%</b> on-device by default</span>
+  </div>
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps. That’s the whole app.</h2>
+      <p>No dashboards to configure, no budgets to define first. Just start typing.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h3>Type the amount</h3>
+        <p>A big, calm keypad opens the moment you launch the app. Punch in what you paid.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h3>Tap a category</h3>
+        <p>Café, transport, groceries, health… pick one and the expense flies into your history.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h3>See the picture</h3>
+        <p>At month’s end, open Analytics to see exactly how much you spent — and on what.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Why Spendr</p>
+      <h2>Everything you need. Nothing you don’t.</h2>
+      <p>Most finance apps drown you in settings and terminology. Spendr is a clean sheet of paper and a pencil.</p>
+    </div>
+    <div class="features">
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Two-tap logging</h3>
+        <p>Amount, category, done. The fastest way to record a purchase you’ll find anywhere.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></div>
+        <h3>Clear analytics</h3>
+        <p>Day, month or year. A simple chart and a ranked list show where the money actually went.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Recurring payments</h3>
+        <p>Rent, phone, subscriptions — set them once and they post themselves every month, tagged “auto”.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Light &amp; dark themes</h3>
+        <p>A crisp black-and-white paper feel by day, a soft graphite mode by night. Your call.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <h3>Private by default</h3>
+        <p>Your expenses live on your phone. No account required to start, nothing to sign up for.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3>50+ categories</h3>
+        <p>From groceries to travel to pets — ready out of the box, and you can add your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE ============ -->
+<section>
+  <div class="wrap showcase">
+
+    <div class="show-row reveal">
+      <div class="show-text">
+        <p class="eyebrow">The keypad</p>
+        <h3>Open the app. Start typing.</h3>
+        <p>No blank “add transaction” form with ten fields. The number pad is right there, waiting. Type, tap a category, and watch the amount fly away.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Big serif figures you can read at a glance</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Category picker one swipe away</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Zero fields to fill in</li>
+        </ul>
+      </div>
+      <div class="show-media"><div class="phone"><img src="assets/screens/02-keypad-dark.jpg" alt="Spendr keypad, dark theme" loading="lazy" /></div></div>
+    </div>
+
+    <div class="show-row rev reveal">
+      <div class="show-text">
+        <p class="eyebrow">Analytics</p>
+        <h3>See where it all went.</h3>
+        <p>At the end of the month, one screen tells the story: total spent up top, a colourful daily chart, and every category ranked by how much it cost you.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Switch between day, month and year</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Category breakdown with percentages</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No spreadsheets, no formulas</li>
+        </ul>
+      </div>
+      <div class="show-media"><div class="phone"><img src="assets/screens/03-analytics.jpg" alt="Spendr analytics screen" loading="lazy" /></div></div>
+    </div>
+
+    <div class="show-row reveal">
+      <div class="show-text">
+        <p class="eyebrow">History &amp; recurring</p>
+        <h3>Every purchase, in order.</h3>
+        <p>Scroll a clean, month-by-month feed of everything you’ve logged. Regular bills post automatically each month, marked “auto”, so you never forget them.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tap any entry to edit or delete it</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Monthly totals in every section header</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Set a monthly payment once — forget it</li>
+        </ul>
+      </div>
+      <div class="show-media"><div class="phone"><img src="assets/screens/04-history.jpg" alt="Spendr history screen" loading="lazy" /></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ AUDIENCE ============ -->
+<section class="audience">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Made for people who value their time</p>
+      <h2>Time is money.<br />So don’t spend it on <em>budgeting apps.</em></h2>
+      <p>You’re at the start of your career and money finally matters. You want to know where it goes — without turning into an accountant to find out.</p>
+      <p>There’s an ocean of personal-finance apps, and they all bury you in settings, categories to configure, and terms nobody explains. Spendr threw all of that out.</p>
+    </div>
+    <div class="reveal">
+      <p class="quote">“It’s a clean sheet of paper and a pencil. Bought a coffee — write it down. A monthly bill showed up — write it down. At the end of the month you simply see the total.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Pricing</p>
+      <h2>Free to start. Yours forever after that.</h2>
+      <p>Try everything for free. Love it? Unlock Spendr Pro with a single one-time payment — no subscription.</p>
+    </div>
+    <div class="price-cards">
+      <div class="price reveal">
+        <span class="tag">Free</span>
+        <div class="amt">$0</div>
+        <h3>Everything to get going</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Two-tap logging &amp; full history</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Analytics for day, month &amp; year</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Light &amp; dark themes</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Up to 1,000 expenses</li>
+        </ul>
+      </div>
+      <div class="price hi reveal">
+        <span class="tag">Spendr Pro · one-time</span>
+        <div class="amt">One&nbsp;payment <small>/ no subscription</small></div>
+        <h3>Unlimited, forever</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Everything in Free</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Unlimited expenses — no cap</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Custom categories</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Pay once, keep it for good</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="get" class="cta-band">
+  <div class="wrap reveal">
+    <div class="inner">
+      <h2>Start tracking in the next 10 seconds.</h2>
+      <p>Download Spendr, type your first amount, tap a category. That’s the whole tutorial.</p>
+      <a href="#" class="btn btn-primary" style="padding:15px 28px;font-size:16px;">
+        Get Spendr
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p style="margin-top:20px;font-size:13.5px;opacity:.8;">Coming soon to the App Store &amp; Google Play.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><img src="assets/logo-disc.png" alt="" /><span>Spendr</span></a>
+        <p>A fast, private, local-first expense tracker. Built with care by developer Anton Beliakov for people who’d rather live their lives than manage a spreadsheet.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Product</h4>
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#get">Get Spendr</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@spendr.app">hello@spendr.app</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Spendr. All rights reserved.</span>
+      <span>Made for people who value their time.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- theme toggle (persisted) ----
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('spendr-theme');
+  if (saved) root.setAttribute('data-theme', saved);
+  const syncIcon = () => {
+    const dark = root.getAttribute('data-theme') === 'dark';
+    toggle.textContent = dark ? '☀️' : '🌙';
+    document.querySelector('meta[name=theme-color]').setAttribute('content', dark ? '#15171b' : '#ffffff');
+  };
+  syncIcon();
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('spendr-theme', next);
+    syncIcon();
+  });
+
+  // ---- reveal on scroll ----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
