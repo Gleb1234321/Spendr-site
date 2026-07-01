@@ -116,61 +116,56 @@ section { padding: 96px 0; }
 .hero-note { font-size: 13.5px; color: var(--sub); margin-top: 18px; }
 .hero-note b { color: var(--ink); font-weight: 600; }
 
-/* ---------- realistic phone mockup ----------
-   Titanium body -> black inner rim -> screen. Dynamic Island + side buttons +
-   glass glare. Width drives everything; internals scale via em on font-size. */
+/* ---------- Xiaomi 12X mockup ----------
+   Flat thin uniform bezel, centred punch-hole camera, 20:9 screen, side keys on
+   the right. Width is driven by font-size so all internals scale in em. */
 .hero-phones { position: relative; display: grid; place-items: center; min-height: 560px; }
 .phone {
   position: relative;
-  font-size: 268px;                 /* the phone's width; children scale in em */
+  font-size: 262px;                 /* the phone's width; children scale in em */
   width: 1em;
-  border-radius: .155em;            /* outer body corner */
-  padding: .033em;                  /* titanium frame thickness */
-  background:
-    linear-gradient(145deg, #3a3d42 0%, #17181b 22%, #1c1e22 50%, #101114 78%, #33363b 100%);
+  border-radius: .135em;            /* 12X outer corner (moderately rounded) */
+  padding: .016em;                  /* thin metal edge */
+  background:                        /* brushed dark-grey aluminium rail */
+    linear-gradient(120deg, #55585d 0%, #232529 14%, #303338 50%, #1c1e21 86%, #4a4d52 100%);
   box-shadow:
-    0 .01em .02em rgba(255,255,255,.28) inset,      /* top frame highlight */
-    0 -.006em .02em rgba(0,0,0,.55) inset,
-    0 .16em .30em -.10em rgba(0,0,0,.5),            /* drop shadow */
-    0 .06em .12em -.04em rgba(0,0,0,.4);
+    0 .004em .006em rgba(255,255,255,.35) inset,    /* rail top glint */
+    0 -.004em .006em rgba(0,0,0,.5) inset,
+    0 .15em .28em -.10em rgba(0,0,0,.45),           /* drop shadow */
+    0 .05em .10em -.04em rgba(0,0,0,.38);
 }
 .phone .screen {
   position: relative;
-  border-radius: .125em;            /* inner screen corner */
+  border-radius: .122em;            /* inner screen corner */
   overflow: hidden;
   background: #000;
-  box-shadow: 0 0 0 .006em #000, 0 0 0 .012em rgba(255,255,255,.04);
-  aspect-ratio: 9 / 19.5;
+  /* uniform black bezel ring around the panel */
+  box-shadow: 0 0 0 .009em #050505, 0 0 0 .0115em rgba(255,255,255,.05);
+  aspect-ratio: 1080 / 2400;        /* 20:9, native to the 12X screenshots */
 }
 .phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Dynamic Island */
+/* centred punch-hole front camera */
 .phone .island {
-  position: absolute; top: .028em; left: 50%; transform: translateX(-50%);
-  width: .30em; height: .038em; border-radius: .03em; background: #000; z-index: 4;
-  box-shadow: 0 .004em .006em rgba(0,0,0,.6);
-}
-.phone .island::after {           /* camera dot */
-  content: ""; position: absolute; right: .028em; top: 50%; transform: translateY(-50%);
-  width: .014em; height: .014em; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #26333f, #05070a 70%);
-  box-shadow: 0 0 0 .0015em rgba(80,120,160,.35);
+  position: absolute; top: .019em; left: 50%; transform: translateX(-50%);
+  width: .026em; height: .026em; border-radius: 50%; z-index: 4;
+  background: radial-gradient(circle at 36% 34%, #2b3a47 0%, #0a0d11 62%, #000 100%);
+  box-shadow: 0 0 0 .002em rgba(0,0,0,.85), 0 0 0 .0032em rgba(90,130,170,.28);
 }
 /* glass glare sweep */
 .phone .screen::after {
   content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
-  background: linear-gradient(125deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 26%, rgba(255,255,255,0) 74%, rgba(255,255,255,.05) 100%);
+  background: linear-gradient(125deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 24%, rgba(255,255,255,0) 76%, rgba(255,255,255,.045) 100%);
 }
-/* side buttons */
-.phone::before {                  /* power (right) */
-  content: ""; position: absolute; right: -.012em; top: .34em;
-  width: .012em; height: .12em; border-radius: 0 .01em .01em 0;
-  background: linear-gradient(90deg, #0c0d0f, #303338);
+/* Xiaomi side keys — both on the right: power, then volume rocker above it */
+.phone::before {                  /* power button */
+  content: ""; position: absolute; right: -.009em; top: .30em;
+  width: .009em; height: .072em; border-radius: 0 .006em .006em 0;
+  background: linear-gradient(90deg, #131417, #43464b);
 }
-.phone::after {                   /* volume pair (left) */
-  content: ""; position: absolute; left: -.012em; top: .26em;
-  width: .012em; height: .078em; border-radius: .01em 0 0 .01em;
-  background: linear-gradient(270deg, #0c0d0f, #303338);
-  box-shadow: 0 .11em 0 rgba(48,51,56,1), 0 .11em 0 -.001em #0c0d0f;
+.phone::after {                   /* volume rocker */
+  content: ""; position: absolute; right: -.009em; top: .18em;
+  width: .009em; height: .092em; border-radius: 0 .006em .006em 0;
+  background: linear-gradient(90deg, #131417, #43464b);
 }
 .hero-phones .phone.p1 { transform: rotate(-5deg) translateX(-46px); z-index: 2; }
 .hero-phones .phone.p2 { position: absolute; transform: rotate(6deg) translateX(84px) translateY(30px); z-index: 1; }
