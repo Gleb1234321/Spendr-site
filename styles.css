@@ -116,17 +116,64 @@ section { padding: 96px 0; }
 .hero-note { font-size: 13.5px; color: var(--sub); margin-top: 18px; }
 .hero-note b { color: var(--ink); font-weight: 600; }
 
-/* phone mock in hero */
-.hero-phones { position: relative; display: grid; place-items: center; min-height: 520px; }
+/* ---------- realistic phone mockup ----------
+   Titanium body -> black inner rim -> screen. Dynamic Island + side buttons +
+   glass glare. Width drives everything; internals scale via em on font-size. */
+.hero-phones { position: relative; display: grid; place-items: center; min-height: 560px; }
 .phone {
-  border-radius: 34px; overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 40px 80px -30px rgba(0,0,0,.35), 0 0 0 8px color-mix(in srgb, var(--surf) 100%, transparent);
-  background: var(--surf);
+  position: relative;
+  font-size: 268px;                 /* the phone's width; children scale in em */
+  width: 1em;
+  border-radius: .155em;            /* outer body corner */
+  padding: .033em;                  /* titanium frame thickness */
+  background:
+    linear-gradient(145deg, #3a3d42 0%, #17181b 22%, #1c1e22 50%, #101114 78%, #33363b 100%);
+  box-shadow:
+    0 .01em .02em rgba(255,255,255,.28) inset,      /* top frame highlight */
+    0 -.006em .02em rgba(0,0,0,.55) inset,
+    0 .16em .30em -.10em rgba(0,0,0,.5),            /* drop shadow */
+    0 .06em .12em -.04em rgba(0,0,0,.4);
 }
-.phone img { width: 100%; }
-.hero-phones .phone.p1 { width: 268px; transform: rotate(-5deg) translateX(-46px); z-index: 2; }
-.hero-phones .phone.p2 { width: 268px; position: absolute; transform: rotate(6deg) translateX(78px) translateY(26px); z-index: 1; opacity: .96; }
+.phone .screen {
+  position: relative;
+  border-radius: .125em;            /* inner screen corner */
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 0 .006em #000, 0 0 0 .012em rgba(255,255,255,.04);
+  aspect-ratio: 9 / 19.5;
+}
+.phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Dynamic Island */
+.phone .island {
+  position: absolute; top: .028em; left: 50%; transform: translateX(-50%);
+  width: .30em; height: .038em; border-radius: .03em; background: #000; z-index: 4;
+  box-shadow: 0 .004em .006em rgba(0,0,0,.6);
+}
+.phone .island::after {           /* camera dot */
+  content: ""; position: absolute; right: .028em; top: 50%; transform: translateY(-50%);
+  width: .014em; height: .014em; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #26333f, #05070a 70%);
+  box-shadow: 0 0 0 .0015em rgba(80,120,160,.35);
+}
+/* glass glare sweep */
+.phone .screen::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background: linear-gradient(125deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 26%, rgba(255,255,255,0) 74%, rgba(255,255,255,.05) 100%);
+}
+/* side buttons */
+.phone::before {                  /* power (right) */
+  content: ""; position: absolute; right: -.012em; top: .34em;
+  width: .012em; height: .12em; border-radius: 0 .01em .01em 0;
+  background: linear-gradient(90deg, #0c0d0f, #303338);
+}
+.phone::after {                   /* volume pair (left) */
+  content: ""; position: absolute; left: -.012em; top: .26em;
+  width: .012em; height: .078em; border-radius: .01em 0 0 .01em;
+  background: linear-gradient(270deg, #0c0d0f, #303338);
+  box-shadow: 0 .11em 0 rgba(48,51,56,1), 0 .11em 0 -.001em #0c0d0f;
+}
+.hero-phones .phone.p1 { transform: rotate(-5deg) translateX(-46px); z-index: 2; }
+.hero-phones .phone.p2 { position: absolute; transform: rotate(6deg) translateX(84px) translateY(30px); z-index: 1; }
 .blob {
   position: absolute; width: 480px; height: 480px; border-radius: 50%;
   background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--coral) 40%, transparent), transparent 62%);
@@ -134,8 +181,15 @@ section { padding: 96px 0; }
 }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .hero-phones { min-height: 460px; margin-top: 8px; }
+  .hero-phones { min-height: 500px; margin-top: 8px; }
   .hero p.lead { max-width: none; }
+}
+@media (max-width: 460px) {
+  .hero-phones { min-height: 430px; }
+  .hero-phones .phone { font-size: 214px; }
+  .hero-phones .phone.p1 { transform: rotate(-5deg) translateX(-28px); }
+  .hero-phones .phone.p2 { transform: rotate(6deg) translateX(58px) translateY(24px); }
+  .show-media .phone { font-size: 250px; }
 }
 
 /* ---------- trust strip ---------- */
@@ -187,7 +241,7 @@ section { padding: 96px 0; }
 .show-text li { display: flex; gap: 11px; font-size: 15.5px; }
 .show-text li svg { flex: 0 0 auto; margin-top: 3px; color: var(--coral); }
 .show-media { display: grid; place-items: center; }
-.show-media .phone { width: 290px; }
+.show-media .phone { font-size: 290px; }
 @media (max-width: 860px) {
   .show-row, .show-row.rev { grid-template-columns: 1fr; gap: 26px; }
   .show-row.rev .show-text { order: 0; }
