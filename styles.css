@@ -103,6 +103,25 @@ section { padding: 96px 0; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--ink); }
 
+/* ---------- app-store badges ---------- */
+.store-badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.store-badges--center { justify-content: center; }
+.store-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 52px; padding: 0 16px 0 14px; border-radius: 11px;
+  background: #000; color: #fff; border: 1px solid #000;
+  transition: transform .18s var(--ease), box-shadow .2s, background .2s;
+}
+.store-badge:hover { transform: translateY(-2px); box-shadow: 0 12px 26px -12px rgba(0,0,0,.55); }
+.store-badge svg { width: 24px; height: 24px; flex: 0 0 auto; }
+.store-badge .sb-txt { display: flex; flex-direction: column; line-height: 1; text-align: left; }
+.store-badge .sb-txt small { font-size: 10px; letter-spacing: .02em; opacity: .92; margin-bottom: 3px; text-transform: none; }
+.store-badge .sb-txt strong { font-size: 18px; font-weight: 600; letter-spacing: .01em; }
+/* on dark CTA band: give the black badge a light outline so it reads */
+.store-badge--onDark { border-color: rgba(255,255,255,.35); background: #000; }
+[data-theme="dark"] .store-badge { background: #fff; color: #0b0b0b; border-color: #fff; }
+[data-theme="dark"] .store-badge--onDark { background: #fff; color: #0b0b0b; border-color: rgba(255,255,255,.4); }
+
 /* ---------- hero ---------- */
 .hero { padding: 80px 0 40px; position: relative; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
