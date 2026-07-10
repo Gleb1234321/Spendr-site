@@ -32,7 +32,7 @@
   </a>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 2 July 2026 · Effective worldwide</p>
+  <p class="updated">Last updated: 10 July 2026 · Effective worldwide</p>
 
   <p>This Privacy Policy explains how <strong>Spendr</strong> (“Spendr”, the “App”, “we”, “us”, or “our”) handles information when you use our mobile application and this website. Spendr is a personal expense-tracking application: you type an amount, tap a category, and the entry is saved. We built Spendr to be private by default, and this document describes exactly what that means.</p>
 
@@ -61,7 +61,7 @@
   <ul>
     <li><strong>Your expenses stay on your device.</strong> The amounts and categories you enter are stored locally on your phone. We do not upload them to our servers or read them.</li>
     <li><strong>We don’t ask for your name, email or bank.</strong> You can use Spendr without creating an account. Spendr never connects to your bank and never asks for card numbers.</li>
-    <li><strong>We collect only minimal, non-identifying diagnostics</strong> to keep the App working — and only if analytics are enabled. These contain no expense data.</li>
+    <li><strong>We collect only minimal, non-identifying diagnostics</strong> (crash reports and coarse usage events) to keep the App working. These contain no expense data, and you can turn them off in the Menu.</li>
     <li><strong>We don’t sell your data.</strong> Ever.</li>
   </ul>
 
@@ -70,16 +70,14 @@
   <h3>2.1 Information you enter (stored on your device)</h3>
   <p>When you log an expense, you provide an <strong>amount</strong>, a <strong>category</strong>, a <strong>date/time</strong>, and optionally a short <strong>note</strong>. This content is stored in a local database on your device (the file <code>spendr.db</code>). By default it is not transmitted to us and remains under your control.</p>
 
-  <h3>2.2 Optional cloud backup / sync</h3>
-  <p>If you choose to enable a backup or transfer feature, a copy of your expense data may be sent to and stored on cloud infrastructure operated by Google Firebase on our behalf, protected by an anonymous, randomly generated identifier. This happens only at your request, so that you can move your data to a new device. If you never enable it, your data never leaves your phone.</p>
+  <h3>2.2 Backups you create</h3>
+  <p>Spendr can create an <strong>encrypted backup file</strong> of your data so you can move it to another device. When you use this feature, your data is packaged into a single file that is <strong>encrypted on your device</strong> (AES‑256‑GCM) with a recovery code shown only to you; the file is then handed to your operating system’s share/save dialog for you to store or send wherever you choose. We do <strong>not</strong> receive, upload, or store these backups — they never pass through our servers, and the recovery code is never sent to us. Losing the recovery code means the backup cannot be decrypted.</p>
+  <p>Separately, your device’s own operating system may include the App’s local database in its <strong>native device backup</strong> (Android Auto Backup / Google One, or Apple iCloud Backup) if you have that enabled in your device settings. That backup is managed entirely by Google or Apple under your account, not by us.</p>
 
-  <h3>2.3 Anonymous authentication</h3>
-  <p>Certain optional server features use <strong>Firebase Anonymous Authentication</strong>. This creates a random identifier for your app installation. It is <em>not</em> linked to your name, email, phone number, or any social account, and it is not used to track you across other apps or websites.</p>
+  <h3>2.3 Diagnostic &amp; usage data</h3>
+  <p>To understand whether the App is stable and which features are used, Spendr collects limited, aggregated, non-identifying telemetry through Firebase Analytics and crash reports through Firebase Crashlytics. This may include: app version, device model and operating-system version, general region derived from your IP address (not stored as a precise location), coarse feature-usage events (for example, “opened analytics screen”), and technical crash logs. <strong>We deliberately never log the content of your expenses</strong> — no amounts, category values, notes, or personal identifiers are included in this data. We do not collect an advertising identifier and do not use this data for advertising. This collection is <strong>on by default</strong>, and you can turn it off at any time with the toggle in the App’s Menu (or through your device’s privacy controls).</p>
 
-  <h3>2.4 Diagnostic &amp; usage data (only if enabled)</h3>
-  <p>To understand whether the App is stable and which features are used, Spendr can collect limited, aggregated, non-identifying telemetry through Firebase Analytics and crash reports through Firebase Crashlytics. This may include: app version, device model and operating-system version, general region derived from your IP address (not stored as a precise location), coarse feature-usage events (for example, “opened analytics screen”), and technical crash logs. <strong>We deliberately never log the content of your expenses</strong> — no amounts, category values, notes, or personal identifiers are included in this data. Where the platform requires it, you can turn this collection off in the App’s settings or through your device’s privacy controls.</p>
-
-  <h3>2.5 Purchase information</h3>
+  <h3>2.4 Purchase information</h3>
   <p>Spendr offers an optional one-time “Pro” upgrade. Payments are processed entirely by <strong>Apple App Store</strong> or <strong>Google Play</strong>; we never see or store your payment-card details. To recognise your purchase and restore it across your devices, we use <strong>RevenueCat</strong>, which receives a purchase receipt and an anonymous app-user identifier. We receive confirmation of entitlement status only.</p>
 
   <h3>2.6 Website</h3>
@@ -106,7 +104,7 @@
   <h2 id="s5">5. Service providers we use</h2>
   <p>We work with a small number of trusted providers that process data on our behalf under appropriate data-processing terms:</p>
   <ul>
-    <li><strong>Google Firebase</strong> (authentication, optional backup storage, analytics, crash reporting) — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">privacy information</a>.</li>
+    <li><strong>Google Firebase</strong> (analytics and crash reporting only) — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">privacy information</a>.</li>
     <li><strong>RevenueCat</strong> (purchase validation and entitlement management) — <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</li>
     <li><strong>Apple App Store / Google Play</strong> (payment processing and distribution).</li>
     <li><strong>GitHub Pages</strong> (hosting of this website).</li>
@@ -116,7 +114,7 @@
   <p>Because Spendr is available worldwide and our providers operate globally, information processed on our behalf may be transferred to and stored in countries other than yours, including the United States. Where such transfers involve personal data from the EEA or UK, they are safeguarded by mechanisms such as the European Commission’s Standard Contractual Clauses (and the UK Addendum) or an adequacy decision, as applicable.</p>
 
   <h2 id="s7">7. Data retention</h2>
-  <p>Expense data you enter is retained on your device until you delete it or uninstall the App. Optional backup data is retained until you delete it or request its removal. Aggregated diagnostic data is retained for a limited period in accordance with our providers’ standard retention windows and then deleted or anonymised.</p>
+  <p>Expense data you enter is retained on your device until you delete it or uninstall the App. Encrypted backup files you create are stored wherever you choose to save them and are under your control; we do not hold copies. Aggregated diagnostic data is retained for a limited period in accordance with our providers’ standard retention windows (Analytics data retention is set to the minimum available) and then deleted or anonymised.</p>
 
   <h2 id="s8">8. Your rights</h2>
   <p>Depending on where you live, you may have the right to access, correct, delete, or port your personal data, to object to or restrict certain processing, and to withdraw consent. Because most of your data lives only on your device, you can exercise many of these rights directly — by editing or deleting entries in the App, or by uninstalling it. For data held by our providers on our behalf, contact us at <a href="mailto:kansio.uusi@gmail.com">kansio.uusi@gmail.com</a> and we will respond within the timeframe required by applicable law. You also have the right to lodge a complaint with your local data-protection authority.</p>
